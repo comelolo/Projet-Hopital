@@ -6,8 +6,9 @@
 package controleur;
 
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
 import modele.Connexion;
+import vue.*;
 
 /**
  *
@@ -20,15 +21,22 @@ public class Hopital_Test {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-       try
-       {
-        Connexion connect = new Connexion("hopital", "root", "");
-       } catch(SQLException e) {
-           System.out.println("erreur : " + e);
-       } catch(ClassNotFoundException e2) {
-           System.out.println("erreur : " + e2);
-       }
-       
+        Connexion connect = null;
+
+        try {
+            connect = new Connexion("hopital", "root", "");
+            String table = "chambre";
+            String requete = "SELECT * FROM chambre;";
+            ArrayList<String> liste = connect.remplirChampsTable(table);
+            for (int i = 0; i < liste.size(); i++) {
+                System.out.println(" " + liste.get(i) + " ");
+            }
+            Home hopital = new Home();
+            hopital.setVisible(true);
+        } catch (SQLException | ClassNotFoundException e) {
+            System.out.println("erreur : " + e);
+        } 
+
     }
-    
+
 }
