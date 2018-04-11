@@ -8,6 +8,7 @@ package controleur;
 /**
  *
  * @author duthu comelolo
+ * 
  */
 public class Service {
     
@@ -65,7 +66,7 @@ public class Service {
     
     // Fonctions
     public void rechercherService(){
-        //rechercher dans la bdd
+        //rechercher ds la bdd
     }
     
     public void majService(){
