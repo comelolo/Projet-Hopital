@@ -5,35 +5,31 @@
  */
 package controleur;
 
-
 import java.util.*;
 import java.sql.*;
 import modele.*;
 
 /**
  *
-<<<<<<< HEAD
- * @author duthu 
-=======
- * @author duthu comelolo
- * 
->>>>>>> 0743c2253783774827fdad199216afc28d794076
+ * @author comel
  */
-public class Service {
-    
+public class Chambre {
+
     private Connexion connect;
     public Vector<Vector> result;
-    public String requete = "SELECT * FROM chambre;";
-    
-    
-    //Constructeur par défaut
-    
-    public Service(Connexion con){
+    public String requete = "SELECT * FROM service;";
+
+    public Chambre(Connexion con) {
         connect = con;
         result = actualiser(con);
-        
     }
-    
+
+    /**
+     *
+     * @param connect
+     * @param new_requete
+     * @return
+     */
     public Vector<Vector> recherche(Connexion connect, String new_requete) {
         Vector<Vector> result = new Vector<Vector>();
         try {
@@ -53,33 +49,14 @@ public class Service {
     }
     
     
-<<<<<<< HEAD
     public Vector<Vector> actualiser(Connexion con) {
-        result = recherche(con, "SELECT * FROM service;");
+        result = recherche(con, "SELECT * FROM chambre;");
         return result;
-=======
-    // Fonctions
-    public void rechercherService(){
-        //rechercher ds la bdd
-    }
-    
-    public void majService(){
-        
-    }
-    
-    public void supprimerService(){
-        
-    }
-    
-    public void afficherService(){
-        System.out.println("Code du service : "+getCodeService());
-        System.out.println("- Nom du service : "+getNomService());
-        System.out.println("- Batiment du service : "+getBatimentService());
-        System.out.println("- Directeur du service : "+getDirecteurService());
-        
->>>>>>> 0743c2253783774827fdad199216afc28d794076
     }
     
 
+    public Vector getChambre(int i) {
+        return result.get(i);
+    }
     
 }

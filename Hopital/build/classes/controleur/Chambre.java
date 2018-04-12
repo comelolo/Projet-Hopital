@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modele;
+package controleur;
 
 import java.util.*;
 import java.sql.*;
+import modele.*;
 
 /**
  *
@@ -18,19 +19,24 @@ public class Chambre {
     private String code_service;
     private int surveillant;
     private int nb_lits;
-    private ArrayList<String> result;
+    private Connexion connect;
+    public Vector<Vector> result;
     public String requete = "SELECT * FROM chambre;";
 
-    public Chambre(Connexion connect) {
-        try {
-            result = connect.remplirChampsRequete(requete);
-        } catch (SQLException e) {
-            System.out.println("erreur : " + e);
-        }
+    public Chambre(Connexion con) {
+        connect = con;
+        result = recherche(con, "SELECT * FROM chambre;");
     }
 
+    /**
+     *
+     * @param connect
+     * @param new_requete
+     * @return
+     */
     
-    public ArrayList recherche(Connexion connect, String new_requete) {
+    public Vector<Vector> recherche(Connexion connect, String new_requete) {
+        Vector<Vector> result = new Vector<Vector>();
         try {
             result = connect.remplirChampsRequete(new_requete);
         } catch (SQLException e) {
@@ -38,8 +44,11 @@ public class Chambre {
         }
         return result;
     }
+    
+    
 
-    public String getChambre(int i) {
+    public Vector getChambre(int i) {
         return result.get(i);
     }
+    
 }
