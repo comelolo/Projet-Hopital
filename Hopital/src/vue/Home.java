@@ -143,6 +143,7 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -152,6 +153,8 @@ public class Home extends javax.swing.JFrame {
                         .addComponent(rechercher, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)))
                 .addContainerGap(13, Short.MAX_VALUE))
 =======
+=======
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
                 .addGap(19, 19, 19)
                 .addComponent(rechercher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -247,6 +250,7 @@ public class Home extends javax.swing.JFrame {
             home_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(home_panelLayout.createSequentialGroup()
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addGap(629, 629, 629)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -255,6 +259,8 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(208, 208, 208))
 =======
+=======
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
                 .addContainerGap(215, Short.MAX_VALUE)
                 .addGroup(home_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, home_panelLayout.createSequentialGroup()
@@ -263,6 +269,9 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, home_panelLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(576, 576, 576))))
+<<<<<<< HEAD
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
+=======
 >>>>>>> 0743c2253783774827fdad199216afc28d794076
         );
         home_panelLayout.setVerticalGroup(
@@ -273,7 +282,11 @@ public class Home extends javax.swing.JFrame {
                 .addGap(81, 81, 81)
                 .addComponent(jLabel1)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addContainerGap(289, Short.MAX_VALUE))
+=======
+                .addContainerGap(340, Short.MAX_VALUE))
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
 =======
                 .addContainerGap(340, Short.MAX_VALUE))
 >>>>>>> 0743c2253783774827fdad199216afc28d794076
@@ -373,7 +386,11 @@ public class Home extends javax.swing.JFrame {
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
+=======
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
 =======
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
 >>>>>>> 0743c2253783774827fdad199216afc28d794076
@@ -394,7 +411,11 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addContainerGap(40, Short.MAX_VALUE))
+=======
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
 =======
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 >>>>>>> 0743c2253783774827fdad199216afc28d794076
@@ -500,6 +521,9 @@ public class Home extends javax.swing.JFrame {
 =======
                 .addComponent(jButton2)
                 .addContainerGap(442, Short.MAX_VALUE))
+<<<<<<< HEAD
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
+=======
 >>>>>>> 0743c2253783774827fdad199216afc28d794076
         );
         jPanel4Layout.setVerticalGroup(
@@ -550,7 +574,11 @@ public class Home extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1704, Short.MAX_VALUE)
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
 =======
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1704, Short.MAX_VALUE)
 >>>>>>> 0743c2253783774827fdad199216afc28d794076
@@ -565,7 +593,11 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
+=======
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 955, Short.MAX_VALUE)
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
 =======
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 955, Short.MAX_VALUE)
 >>>>>>> 0743c2253783774827fdad199216afc28d794076

@@ -17,6 +17,9 @@ import modele.*;
 =======
  * @author duthu comelolo
  * 
+<<<<<<< HEAD
+>>>>>>> 0743c2253783774827fdad199216afc28d794076
+=======
 >>>>>>> 0743c2253783774827fdad199216afc28d794076
  */
 public class Service {
