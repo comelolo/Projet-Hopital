@@ -1,88 +1,57 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
 package controleur;
 
+
+import java.util.*;
+import java.sql.*;
+import modele.*;
+
 /**
- *
- * @author duthu comelolo
+
+ * @author duthu 
+ * 
  */
 public class Service {
     
-    int codeService;
-    String nomService;
-    int batimentService;
-    String directeurService;
+    private Connexion connect;
+    public Vector<Vector> result;
+    public String requete = "SELECT * FROM chambre;";
     
-    
+    //bonjour
     //Constructeur par défaut
     
-    public Service(){
-        System.out.println("Création d'un nouveau service par défaut");
-        codeService=123;
-        nomService="Service";
-        batimentService=0;
-        directeurService="Dupont";
-    }
-    
-    
-    //Getters
-    public int getCodeService(){
-        return codeService;
-    }
-    
-    public String getNomService(){
-        return nomService;       
-    }
-    
-    public int getBatimentService(){
-        return batimentService;
-    }
-    
-    public String getDirecteurService(){
-        return directeurService;
-    }
-    
-    //Setters
-    public void setCodeService(int pCodeService){
-        codeService=pCodeService;
-    }
-    
-    public void setNomService(String pNomService){
-        nomService=pNomService;
-    }
-    
-    public void setBatimentervice(int pBatimentService){
-        batimentService=pBatimentService;
-    }
-    
-    public void setDirecteurService(String pDirecteurService){
-        directeurService=pDirecteurService;
-    }
-    
-    
-    // Fonctions
-    public void rechercherService(){
-        //rechercher dans la bdd
-    }
-    
-    public void majService(){
+    public Service(Connexion con){
+        connect = con;
+        result = actualiser(con);
         
     }
     
-    public void supprimerService(){
-        
+    public Vector<Vector> recherche(Connexion connect, String new_requete) {
+        Vector<Vector> result = new Vector<Vector>();
+        try {
+            result = connect.remplirChampsRequete(new_requete);
+        } catch (SQLException e) {
+            System.out.println("erreur lors de la recherche : " + e);
+        }
+        return result;
     }
     
-    public void afficherService(){
-        System.out.println("Code du service : "+getCodeService());
-        System.out.println("- Nom du service : "+getNomService());
-        System.out.println("- Batiment du service : "+getBatimentService());
-        System.out.println("- Directeur du service : "+getDirecteurService());
-        
+    public void modifier(Connexion connect, String requete) {
+        try {
+            connect.executeUpdate(requete);
+        } catch (SQLException e) {
+            System.out.println("erreur lors de la modification : " + e);
+        }
     }
     
+    
+
+    public Vector<Vector> actualiser(Connexion con) {
+        result = recherche(con, "SELECT * FROM service;");
+        return result;    
+    }
+    
+
     
 }

@@ -137,32 +137,19 @@ public class Home extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(button_acceuil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-<<<<<<< HEAD
-<<<<<<< HEAD
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(choice1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(choice1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(rechercher, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)))
-                .addContainerGap(13, Short.MAX_VALUE))
-=======
-=======
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-                .addGap(19, 19, 19)
-                .addComponent(rechercher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(button_acceuil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rechercher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(button_acceuil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
->>>>>>> 0743c2253783774827fdad199216afc28d794076
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -249,18 +236,6 @@ public class Home extends javax.swing.JFrame {
         home_panelLayout.setHorizontalGroup(
             home_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(home_panelLayout.createSequentialGroup()
-<<<<<<< HEAD
-<<<<<<< HEAD
-                .addGap(629, 629, 629)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, home_panelLayout.createSequentialGroup()
-                .addContainerGap(217, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(208, 208, 208))
-=======
-=======
->>>>>>> 0743c2253783774827fdad199216afc28d794076
                 .addContainerGap(215, Short.MAX_VALUE)
                 .addGroup(home_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, home_panelLayout.createSequentialGroup()
@@ -269,10 +244,6 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, home_panelLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(576, 576, 576))))
-<<<<<<< HEAD
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
->>>>>>> 0743c2253783774827fdad199216afc28d794076
         );
         home_panelLayout.setVerticalGroup(
             home_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -281,15 +252,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(81, 81, 81)
                 .addComponent(jLabel1)
-<<<<<<< HEAD
-<<<<<<< HEAD
-                .addContainerGap(289, Short.MAX_VALUE))
-=======
                 .addContainerGap(340, Short.MAX_VALUE))
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-                .addContainerGap(340, Short.MAX_VALUE))
->>>>>>> 0743c2253783774827fdad199216afc28d794076
         );
 
         main_panel.add(home_panel, "card3");
@@ -385,15 +348,7 @@ public class Home extends javax.swing.JFrame {
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-<<<<<<< HEAD
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
-=======
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
->>>>>>> 0743c2253783774827fdad199216afc28d794076
         );
 
         javax.swing.GroupLayout chambre_panelLayout = new javax.swing.GroupLayout(chambre_panel);
@@ -410,15 +365,7 @@ public class Home extends javax.swing.JFrame {
                         .addGroup(chambre_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-<<<<<<< HEAD
-<<<<<<< HEAD
-                .addContainerGap(40, Short.MAX_VALUE))
-=======
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
->>>>>>> 0743c2253783774827fdad199216afc28d794076
         );
         chambre_panelLayout.setVerticalGroup(
             chambre_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -515,16 +462,8 @@ public class Home extends javax.swing.JFrame {
                 .addGap(84, 84, 84)
                 .addComponent(categorie_service, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
-<<<<<<< HEAD
                 .addComponent(button_se_search)
-                .addContainerGap(456, Short.MAX_VALUE))
-=======
-                .addComponent(jButton2)
                 .addContainerGap(442, Short.MAX_VALUE))
-<<<<<<< HEAD
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
->>>>>>> 0743c2253783774827fdad199216afc28d794076
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -573,15 +512,7 @@ public class Home extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-<<<<<<< HEAD
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-=======
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1704, Short.MAX_VALUE)
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1704, Short.MAX_VALUE)
->>>>>>> 0743c2253783774827fdad199216afc28d794076
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -592,15 +523,7 @@ public class Home extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
-=======
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 955, Short.MAX_VALUE)
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 955, Short.MAX_VALUE)
->>>>>>> 0743c2253783774827fdad199216afc28d794076
                     .addComponent(main_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -665,6 +588,10 @@ public class Home extends javax.swing.JFrame {
     private void recherche_serviceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recherche_serviceMouseClicked
         recherche_service.setText("");
     }//GEN-LAST:event_recherche_serviceMouseClicked
+
+    private void button_se_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_se_searchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button_se_searchActionPerformed
  
     private void ini_tableau_chambre(Vector<Vector> requete) {
         ini_tableau(model_chambre, jTable1, requete);

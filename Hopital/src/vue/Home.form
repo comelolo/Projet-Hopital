@@ -27,15 +27,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Component id="jPanel1" max="32767" attributes="0"/>
-=======
           <Component id="jPanel1" pref="1704" max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-          <Component id="jPanel1" pref="1704" max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
           <Group type="102" attributes="0">
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -48,15 +40,7 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <Component id="jPanel2" pref="905" max="32767" attributes="0"/>
-=======
                   <Component id="jPanel2" pref="955" max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-                  <Component id="jPanel2" pref="955" max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
                   <Component id="main_panel" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -90,37 +74,24 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="button_acceuil" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-<<<<<<< HEAD
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="choice1" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="choice1" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Component id="rechercher" pref="38" max="32767" attributes="0"/>
+                          <Component id="rechercher" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="button_acceuil" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="13" max="32767" attributes="0"/>
-              </Group>
-=======
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="rechercher" max="32767" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="button_acceuil" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
           </Group>
         </DimensionLayout>
       </Layout>
@@ -299,19 +270,6 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <EmptySpace min="-2" pref="629" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="217" max="32767" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
-=======
-=======
->>>>>>> 0743c2253783774827fdad199216afc28d794076
                       <EmptySpace pref="215" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
@@ -323,10 +281,6 @@
                               <EmptySpace min="-2" pref="576" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-<<<<<<< HEAD
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
->>>>>>> 0743c2253783774827fdad199216afc28d794076
                   </Group>
               </Group>
             </DimensionLayout>
@@ -337,15 +291,7 @@
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <EmptySpace pref="289" max="32767" attributes="0"/>
-=======
                       <EmptySpace pref="340" max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-                      <EmptySpace pref="340" max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
                   </Group>
               </Group>
             </DimensionLayout>
@@ -400,15 +346,7 @@
                               </Group>
                           </Group>
                       </Group>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <EmptySpace pref="40" max="32767" attributes="0"/>
-=======
                       <EmptySpace max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-                      <EmptySpace max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
                   </Group>
               </Group>
             </DimensionLayout>
@@ -510,15 +448,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <Component id="jScrollPane1" alignment="0" pref="626" max="32767" attributes="0"/>
-=======
                       <Component id="jScrollPane1" alignment="0" pref="619" max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
-                      <Component id="jScrollPane1" alignment="0" pref="619" max="32767" attributes="0"/>
->>>>>>> 0743c2253783774827fdad199216afc28d794076
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -674,16 +604,8 @@
                           <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                           <Component id="categorie_service" min="-2" pref="284" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-<<<<<<< HEAD
                           <Component id="button_se_search" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="456" max="32767" attributes="0"/>
-=======
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="442" max="32767" attributes="0"/>
-<<<<<<< HEAD
->>>>>>> 0743c2253783774827fdad199216afc28d794076
-=======
->>>>>>> 0743c2253783774827fdad199216afc28d794076
                       </Group>
                   </Group>
                 </DimensionLayout>
