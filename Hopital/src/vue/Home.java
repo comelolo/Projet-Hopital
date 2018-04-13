@@ -80,6 +80,7 @@ public class Home extends javax.swing.JFrame {
         recherche_chambre = new javax.swing.JTextField();
         categorie_chambre = new java.awt.Choice();
         button_ch_search = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -144,8 +145,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(rechercher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(rechercher, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(button_acceuil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -284,6 +284,14 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton1.setText("Ajouter une chambre");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -295,14 +303,18 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(categorie_chambre, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
                 .addComponent(button_ch_search)
-                .addContainerGap(543, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 336, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(114, 114, 114))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(button_ch_search, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(button_ch_search, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1))
                     .addComponent(recherche_chambre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(categorie_chambre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -592,6 +604,10 @@ public class Home extends javax.swing.JFrame {
     private void button_se_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_se_searchActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_button_se_searchActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseClicked
  
     private void ini_tableau_chambre(Vector<Vector> requete) {
         ini_tableau(model_chambre, jTable1, requete);
@@ -724,6 +740,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel chambre_panel;
     private java.awt.Choice choice1;
     private javax.swing.JPanel home_panel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

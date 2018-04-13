@@ -41,11 +41,21 @@ public class Hopital_Test {
                 champ=champ + "\n";
                 System.out.println(champ);
             }
+            
             Home hopital = new Home(connect);
+            /**
+            ConnexionGraphique connexion = new ConnexionGraphique(hopital);
+            *  si connexion valider alors
+            *   connexion.setVisible(false);
+            *   hopital.setVisible(true);
+            * 
+            */
+            
+            
             hopital.setVisible(true);
         } catch (SQLException | ClassNotFoundException e) {
             System.out.println("erreur : " + e);
-        }
+        } 
 
     }
 

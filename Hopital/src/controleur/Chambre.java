@@ -54,6 +54,16 @@ public class Chambre {
         return result;
     }
     
+    /**
+    public ArrayList ajouter(Connexion con, String requete) {
+        try {
+            
+        } catch () {
+            
+        } 
+    }
+    */
+    
 
     public Vector getChambre(int i) {
         return result.get(i);
