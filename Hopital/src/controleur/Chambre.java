@@ -54,15 +54,24 @@ public class Chambre {
         return result;
     }
     
-    /**
-    public ArrayList ajouter(Connexion con, String requete) {
+    
+    public void ajouter(Connexion con, String requete) {
         try {
-            
-        } catch () {
-            
+            connect.execute(requete);
+        } catch (SQLException e) {
+            System.out.println("erreur lors de l'ajout : " + e);
         } 
     }
-    */
+    
+    public void supprimer(Connexion con, String requete) {
+        try {
+            connect.execute(requete);
+        } catch (SQLException e) {
+            System.out.println("erreur lors de la suppression de l'élément : " + e);
+        } 
+    }
+    
+    
     
 
     public Vector getChambre(int i) {

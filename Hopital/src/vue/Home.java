@@ -27,10 +27,9 @@ public class Home extends javax.swing.JFrame {
     private Connexion connect;
     private Chambre chambre;
     private Service service;
-    private DefaultTableModel model_chambre; 
-    private DefaultTableModel model_service; 
-    private String requete_sql; 
-    
+    private DefaultTableModel model_chambre;
+    private DefaultTableModel model_service;
+    private String requete_sql;
 
     /**
      * Creates new form Test
@@ -80,7 +79,7 @@ public class Home extends javax.swing.JFrame {
         recherche_chambre = new javax.swing.JTextField();
         categorie_chambre = new java.awt.Choice();
         button_ch_search = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        button_add_ch = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -284,11 +283,11 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton1.setText("Ajouter une chambre");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        button_add_ch.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        button_add_ch.setText("Ajouter une chambre");
+        button_add_ch.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                button_add_chMouseClicked(evt);
             }
         });
 
@@ -304,7 +303,7 @@ public class Home extends javax.swing.JFrame {
                 .addGap(69, 69, 69)
                 .addComponent(button_ch_search)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 336, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(button_add_ch)
                 .addGap(114, 114, 114))
         );
         jPanel3Layout.setVerticalGroup(
@@ -314,7 +313,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(button_ch_search, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1))
+                        .addComponent(button_add_ch))
                     .addComponent(recherche_chambre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(categorie_chambre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -524,7 +523,7 @@ public class Home extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1704, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1779, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -573,27 +572,25 @@ public class Home extends javax.swing.JFrame {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         remplir_jTable(evt, jTable1, model_chambre);
     }//GEN-LAST:event_jTable1MouseClicked
-    
+
     private void recherche_chambreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recherche_chambreMouseClicked
         recherche_chambre.setText("");
     }//GEN-LAST:event_recherche_chambreMouseClicked
 
     private void button_ch_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_ch_searchMouseClicked
-        requete_sql = "SELECT * FROM chambre WHERE " + categorie_chambre.getSelectedItem() + " LIKE '%" + recherche_chambre.getText() +"%';";
-        chambre.result = chambre.recherche(connect, requete_sql); 
+        requete_sql = "SELECT * FROM chambre WHERE " + categorie_chambre.getSelectedItem() + " LIKE '%" + recherche_chambre.getText() + "%';";
+        chambre.result = chambre.recherche(connect, requete_sql);
         System.out.println(requete_sql);
         ini_tableau_chambre(chambre.result);
     }//GEN-LAST:event_button_ch_searchMouseClicked
 
     private void jTable_serviceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable_serviceMouseClicked
-        // TODO add your handling code here:
         remplir_jTable(evt, jTable_service, model_service);
-        
     }//GEN-LAST:event_jTable_serviceMouseClicked
 
     private void button_se_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_se_searchMouseClicked
-        requete_sql = "SELECT * FROM service WHERE " + categorie_service.getSelectedItem() + " LIKE '%" + recherche_service.getText() +"%';";
-        service.result = service.recherche(connect, requete_sql); 
+        requete_sql = "SELECT * FROM service WHERE " + categorie_service.getSelectedItem() + " LIKE '%" + recherche_service.getText() + "%';";
+        service.result = service.recherche(connect, requete_sql);
         ini_tableau_service(service.result);
     }//GEN-LAST:event_button_se_searchMouseClicked
 
@@ -605,28 +602,28 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_button_se_searchActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseClicked
- 
+    private void button_add_chMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_add_chMouseClicked
+        popup_ajouter_chambre(model_chambre);
+    }//GEN-LAST:event_button_add_chMouseClicked
+
     private void ini_tableau_chambre(Vector<Vector> requete) {
         ini_tableau(model_chambre, jTable1, requete);
     }
-    
+
     private void ini_tableau_service(Vector<Vector> requete) {
         ini_tableau(model_service, jTable_service, requete);
     }
-    
+
     private void ini_tableau(DefaultTableModel model, JTable table, Vector<Vector> requete) {
         while (model.getRowCount() != 0) {
             model.removeRow(0);
-        } 
+        }
         JButton modifier = new JButton("modifier");
         JButton supprimer = new JButton("supprimer");
         modifier.setName("m");
         supprimer.setName("s");
         for (int i = 0; i < requete.size(); i++) {
-            Vector data = requete.get(i);     
+            Vector data = requete.get(i);
             data.add(modifier);
             data.add(supprimer);
             model.addRow(data);
@@ -634,39 +631,44 @@ public class Home extends javax.swing.JFrame {
         table.repaint();
         table.revalidate();
     }
-    
+
     private void remplir_jTable(java.awt.event.MouseEvent evt, JTable table, DefaultTableModel model) {
         int column = table.getColumnModel().getColumnIndexAtX(evt.getX());
-        int row = evt.getY()/table.getRowHeight();
-        if (row < table.getRowCount() && row>=0 && column < table.getColumnCount() && column >=0) {
+        int row = evt.getY() / table.getRowHeight();
+        if (row < table.getRowCount() && row >= 0 && column < table.getColumnCount() && column >= 0) {
             Object value = table.getValueAt(row, column);
-            if(value instanceof JButton) {
-                ((JButton)value).doClick();
-                JButton bouton = (JButton)value;
-                
+            if (value instanceof JButton) {
+                ((JButton) value).doClick();
+                JButton bouton = (JButton) value;
+
                 if (bouton.getName().equals("m")) {
                     ArrayList<String> valeur_ligne = new ArrayList<String>();
-                    for (int i=0; i<table.getColumnCount()-2; i++) {
+                    for (int i = 0; i < table.getColumnCount() - 2; i++) {
                         valeur_ligne.add(table.getValueAt(row, i).toString());
                     }
                     if (table == jTable1) {
-                        popup_modifier_chambre(model_chambre, valeur_ligne); 
+                        popup_modifier_chambre(model_chambre, valeur_ligne);
                     }
                     if (table == jTable_service) {
-                        
+
                     }
                 }
                 if (bouton.getName().equals("s")) {
                     int h = JOptionPane.showConfirmDialog(null, "Etes vous sûr de vouloir supprimer cet élément ?", "supprimer", 0);
-                    if (h==0) {
+                    if (h == 0) {
                         System.out.println("00000000000");
-                        //comande de suppression SQL
-                        
+                        String t = table.getValueAt(row, 0).toString();
+                        String requete = "DELETE FROM chambre WHERE code_service = '" 
+                                + table.getValueAt(row, 0).toString() +"' AND no_chambre = '" 
+                                + table.getValueAt(row, 1).toString() + "';";
+                        chambre.supprimer(connect, requete);
+                        JOptionPane.showMessageDialog(null, "La chambre a été supprimé avec succès !", "suppression ok", JOptionPane.INFORMATION_MESSAGE);
+                        ini_tableau_chambre(chambre.actualiser(connect));
                     } else {
                         //on ne fait rien
                     }
                 }
-            } 
+            }
         }
     }
 
@@ -692,10 +694,44 @@ public class Home extends javax.swing.JFrame {
             chambre.modifier(connect, requete);
             ini_tableau_chambre(chambre.actualiser(connect));
         } else {
-            
+
         }
     }
-    
+
+    private void popup_ajouter_chambre(DefaultTableModel model) {
+        JTextField code_service = new JTextField("");
+        JTextField num_chambre = new JTextField("");
+        JTextField surveillant = new JTextField("");
+        JTextField nb_lits = new JTextField("");
+        Object[] message = {
+            "Code du service", code_service,
+            "Numéro de chambre", num_chambre,
+            "Surveillant", surveillant,
+            "Nombre de lits", nb_lits
+        };
+        
+        int option = JOptionPane.showConfirmDialog(null, message, "Ajouter une chambre", JOptionPane.OK_CANCEL_OPTION);
+        if (option == JOptionPane.OK_OPTION) {
+            if (code_service.getText().compareTo("code") == 0) {
+            System.out.println(code_service.getText());
+        }
+            while (option == JOptionPane.OK_OPTION && (code_service.getText().compareTo("") == 0 || num_chambre.getText().compareTo("") == 0 || surveillant.getText().compareTo("") == 0 || nb_lits.getText().compareTo("") == 0)) {
+                JOptionPane.showMessageDialog(null, "Veuillez remplir tous les champs", "erreur", JOptionPane.OK_OPTION);
+                option = JOptionPane.showConfirmDialog(null, message, "Ajouter une chambre", JOptionPane.OK_CANCEL_OPTION);
+            }
+            if (option == JOptionPane.OK_OPTION && code_service.getText().compareTo("") != 0 && num_chambre.getText().compareTo("") != 0 && surveillant.getText().compareTo("") != 0 && nb_lits.getText().compareTo("") != 0) {
+                String requete = "INSERT INTO chambre (code_service, no_chambre, surveillant, nb_lits) VALUES ('"
+                        + code_service.getText() + "', '"
+                        + num_chambre.getText() + "', '"
+                        + surveillant.getText() + "', '"
+                        + nb_lits.getText() + "');";
+                chambre.ajouter(connect, requete);
+                JOptionPane.showMessageDialog(null, "La chambre a bien été ajouté à la base de données !", "Ajout Réussi", JOptionPane.INFORMATION_MESSAGE);
+                ini_tableau_chambre(chambre.actualiser(connect));
+            }
+        } 
+    }
+
     private void centrerTable(JTable table) {
         DefaultTableCellRenderer custom = new DefaultTableCellRenderer();
         custom.setHorizontalAlignment(JLabel.CENTER);
@@ -703,7 +739,7 @@ public class Home extends javax.swing.JFrame {
             table.getColumnModel().getColumn(i).setCellRenderer(custom);
         }
     }
-    
+
     class ButtonRenderer extends JButton implements TableCellRenderer {
 
         public ButtonRenderer() {
@@ -729,6 +765,7 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton button_acceuil;
+    private javax.swing.JButton button_add_ch;
     private javax.swing.JButton button_ch_search;
     private javax.swing.JButton button_chambres;
     private javax.swing.JButton button_employes;
@@ -740,7 +777,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel chambre_panel;
     private java.awt.Choice choice1;
     private javax.swing.JPanel home_panel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

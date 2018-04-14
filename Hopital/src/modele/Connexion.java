@@ -203,4 +203,9 @@ public class Connexion {
     public void executeUpdate(String requeteMaj) throws SQLException {
         stmt.executeUpdate(requeteMaj);
     }
+    
+    public void execute(String requete) throws SQLException {
+        stmt.execute(requete);
+    }
+   
 }
