@@ -43,13 +43,12 @@ public class Hopital_Test {
             }
             
             Home hopital = new Home(connect);
-            /**
-            ConnexionGraphique connexion = new ConnexionGraphique(hopital);
-            *  si connexion valider alors
-            *   connexion.setVisible(false);
-            *   hopital.setVisible(true);
-            * 
-            */
+            
+            ConnexionGraphique connexion = new ConnexionGraphique();
+            //*  si connexion valider alors
+             // connexion.setVisible(false);
+              // hopital.setVisible(true);
+            
             
             
             hopital.setVisible(true);

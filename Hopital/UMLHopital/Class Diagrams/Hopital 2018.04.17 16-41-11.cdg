@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Hopital">
+  <ClassDiagramComponents>
+    <Class name="Chambre" package="controleur" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="connect" type="Connexion" visibility="private"/>
+        <Field name="result" type="Vector&lt;Vector&gt;" visibility="public"/>
+        <Field name="requete" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Connexion" name="con"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="recherche" returnType="Vector&lt;Vector&gt;" visibility="public">
+          <Argument type="Connexion" name="connect"/>
+          <Argument type="String" name="new_requete"/>
+        </Method>
+        <Method name="modifier" returnType="void" visibility="public">
+          <Argument type="Connexion" name="connect"/>
+          <Argument type="String" name="requete"/>
+        </Method>
+        <Method name="actualiser" returnType="Vector&lt;Vector&gt;" visibility="public">
+          <Argument type="Connexion" name="con"/>
+        </Method>
+        <Method name="ajouter" returnType="void" visibility="public">
+          <Argument type="Connexion" name="con"/>
+          <Argument type="String" name="requete"/>
+        </Method>
+        <Method name="supprimer" returnType="void" visibility="public">
+          <Argument type="Connexion" name="con"/>
+          <Argument type="String" name="requete"/>
+        </Method>
+        <Method name="getChambre" returnType="Vector" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hopital_Test" package="controleur" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Service" package="controleur" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="connect" type="Connexion" visibility="private"/>
+        <Field name="result" type="Vector&lt;Vector&gt;" visibility="public"/>
+        <Field name="requete" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Connexion" name="con"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="recherche" returnType="Vector&lt;Vector&gt;" visibility="public">
+          <Argument type="Connexion" name="connect"/>
+          <Argument type="String" name="new_requete"/>
+        </Method>
+        <Method name="modifier" returnType="void" visibility="public">
+          <Argument type="Connexion" name="connect"/>
+          <Argument type="String" name="requete"/>
+        </Method>
+        <Method name="actualiser" returnType="Vector&lt;Vector&gt;" visibility="public">
+          <Argument type="Connexion" name="con"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Connexion" package="modele" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="private"/>
+        <Field name="stmt" type="Statement" visibility="private"/>
+        <Field name="rset" type="ResultSet" visibility="private"/>
+        <Field name="rsetMeta" type="ResultSetMetaData" visibility="private"/>
+        <Field name="tables" type="ArrayList&lt;String&gt;" visibility="public"/>
+        <Field name="requetes" type="ArrayList&lt;String&gt;" visibility="public"/>
+        <Field name="requetesMaj" type="ArrayList&lt;String&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameDatabase"/>
+          <Argument type="String" name="loginDatabase"/>
+          <Argument type="String" name="passwordDatabase"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="usernameECE"/>
+          <Argument type="String" name="passwordECE"/>
+          <Argument type="String" name="loginDatabase"/>
+          <Argument type="String" name="passwordDatabase"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="ajouterTable" returnType="void" visibility="public">
+          <Argument type="String" name="table"/>
+        </Method>
+        <Method name="ajouterRequete" returnType="void" visibility="public">
+          <Argument type="String" name="requete"/>
+        </Method>
+        <Method name="ajouterRequeteMaj" returnType="void" visibility="public">
+          <Argument type="String" name="requete"/>
+        </Method>
+        <Method name="remplirChampsTable" returnType="ArrayList" visibility="public">
+          <Argument type="String" name="table"/>
+        </Method>
+        <Method name="remplirChampsRequete" returnType="Vector&lt;Vector&gt;" visibility="public">
+          <Argument type="String" name="requete"/>
+        </Method>
+        <Method name="executeUpdate" returnType="void" visibility="public">
+          <Argument type="String" name="requeteMaj"/>
+        </Method>
+        <Method name="execute" returnType="void" visibility="public">
+          <Argument type="String" name="requete"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SSHTunnel" package="modele" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="firstHost" type="String" visibility="private"/>
+        <Field name="secondHost" type="String" visibility="private"/>
+        <Field name="firstHostPort" type="int" visibility="private"/>
+        <Field name="secondHostPort" type="int" visibility="private"/>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="firstHost"/>
+          <Argument type="String" name="secondHost"/>
+          <Argument type="int" name="firstHostPort"/>
+          <Argument type="int" name="secondHostPort"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="connect" returnType="boolean" visibility="public"/>
+        <Method name="getFirstHost" returnType="String" visibility="public"/>
+        <Method name="setFirstHost" returnType="void" visibility="private">
+          <Argument type="String" name="firstHost"/>
+        </Method>
+        <Method name="getSecondHost" returnType="String" visibility="public"/>
+        <Method name="setSecondHost" returnType="void" visibility="private">
+          <Argument type="String" name="secondHost"/>
+        </Method>
+        <Method name="getFirstHostPort" returnType="int" visibility="public"/>
+        <Method name="setFirstHostPort" returnType="void" visibility="private">
+          <Argument type="int" name="firstHostPort"/>
+        </Method>
+        <Method name="getSecondHostPort" returnType="int" visibility="public"/>
+        <Method name="setSecondHostPort" returnType="void" visibility="private">
+          <Argument type="int" name="secondHostPort"/>
+        </Method>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Home" package="vue" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="connect" type="Connexion" visibility="private"/>
+        <Field name="chambre" type="Chambre" visibility="private"/>
+        <Field name="service" type="Service" visibility="private"/>
+        <Field name="model_chambre" type="DefaultTableModel" visibility="private"/>
+        <Field name="model_service" type="DefaultTableModel" visibility="private"/>
+        <Field name="requete_sql" type="String" visibility="private"/>
+        <Field name="button_acceuil" type="javax.swing.JButton" visibility="private"/>
+        <Field name="button_add_ch" type="javax.swing.JButton" visibility="private"/>
+        <Field name="button_ch_search" type="javax.swing.JButton" visibility="private"/>
+        <Field name="button_chambres" type="javax.swing.JButton" visibility="private"/>
+        <Field name="button_employes" type="javax.swing.JButton" visibility="private"/>
+        <Field name="button_malades" type="javax.swing.JButton" visibility="private"/>
+        <Field name="button_se_search" type="javax.swing.JButton" visibility="private"/>
+        <Field name="button_services" type="javax.swing.JButton" visibility="private"/>
+        <Field name="categorie_chambre" type="java.awt.Choice" visibility="private"/>
+        <Field name="categorie_service" type="java.awt.Choice" visibility="private"/>
+        <Field name="chambre_panel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="choice1" type="java.awt.Choice" visibility="private"/>
+        <Field name="home_panel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTable1" type="javax.swing.JTable" visibility="private"/>
+        <Field name="jTable_service" type="javax.swing.JTable" visibility="private"/>
+        <Field name="main_panel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="recherche_chambre" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="recherche_service" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="rechercher" type="java.awt.TextField" visibility="private"/>
+        <Field name="service_panel" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Connexion" name="con"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="rechercherActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="button_chambresMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="button_acceuilMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="button_servicesMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jTable1MouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="recherche_chambreMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="button_ch_searchMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jTable_serviceMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="button_se_searchMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="recherche_serviceMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="button_se_searchActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="button_add_chMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="ini_tableau_chambre" returnType="void" visibility="private">
+          <Argument type="Vector&lt;Vector&gt;" name="requete"/>
+        </Method>
+        <Method name="ini_tableau_service" returnType="void" visibility="private">
+          <Argument type="Vector&lt;Vector&gt;" name="requete"/>
+        </Method>
+        <Method name="ini_tableau" returnType="void" visibility="private">
+          <Argument type="DefaultTableModel" name="model"/>
+          <Argument type="JTable" name="table"/>
+          <Argument type="Vector&lt;Vector&gt;" name="requete"/>
+        </Method>
+        <Method name="remplir_jTable" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+          <Argument type="JTable" name="table"/>
+          <Argument type="DefaultTableModel" name="model"/>
+        </Method>
+        <Method name="popup_modifier_chambre" returnType="void" visibility="private">
+          <Argument type="DefaultTableModel" name="model"/>
+          <Argument type="ArrayList" name="valeur_ligne"/>
+        </Method>
+        <Method name="popup_ajouter_chambre" returnType="void" visibility="private">
+          <Argument type="DefaultTableModel" name="model"/>
+        </Method>
+        <Method name="centrerTable" returnType="void" visibility="private">
+          <Argument type="JTable" name="table"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InterfaceGraphique" package="vue" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="controleur.Chambre" target="modele.Connexion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controleur.Service" target="modele.Connexion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="service" source="vue.Home" target="controleur.Service" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="connect" source="vue.Home" target="modele.Connexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="chambre" source="vue.Home" target="controleur.Chambre" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="connect" source="controleur.Chambre" target="modele.Connexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="connect" source="controleur.Service" target="modele.Connexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
