@@ -2,7 +2,7 @@
 
 <ClassDiagram name="Hopital">
   <ClassDiagramComponents>
-    <Class name="Chambre" package="controleur" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="Chambre" package="controleur" visibility="public" xPosition="135.0" yPosition="299.0">
       <Fields>
         <Field name="connect" type="Connexion" visibility="private"/>
         <Field name="result" type="Vector&lt;Vector&gt;" visibility="public"/>
@@ -47,7 +47,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Service" package="controleur" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Service" package="controleur" visibility="public" xPosition="1490.0" yPosition="126.0">
       <Fields>
         <Field name="connect" type="Connexion" visibility="private"/>
         <Field name="result" type="Vector&lt;Vector&gt;" visibility="public"/>
@@ -72,7 +72,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Connexion" package="modele" visibility="public" xPosition="920.0" yPosition="20.0">
+    <Class name="Connexion" package="modele" visibility="public" xPosition="717.0" yPosition="20.0">
       <Fields>
         <Field name="conn" type="Connection" visibility="private"/>
         <Field name="stmt" type="Statement" visibility="private"/>
@@ -119,7 +119,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="SSHTunnel" package="modele" visibility="public" xPosition="1220.0" yPosition="20.0">
+    <Class name="SSHTunnel" package="modele" visibility="public" xPosition="1544.0" yPosition="797.0">
       <Fields>
         <Field name="firstHost" type="String" visibility="private"/>
         <Field name="secondHost" type="String" visibility="private"/>
@@ -163,7 +163,7 @@
         <Method name="getUsername" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Home" package="vue" visibility="public" xPosition="1520.0" yPosition="20.0">
+    <Class name="Home" package="vue" visibility="public" xPosition="686.0" yPosition="490.0">
       <Fields>
         <Field name="connect" type="Connexion" visibility="private"/>
         <Field name="chambre" type="Chambre" visibility="private"/>
@@ -210,8 +210,7 @@
         </Constructor>
       </Constructors>
       <Methods>
-        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
-void" visibility="private"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
         <Method name="rechercherActionPerformed" returnType="void" visibility="private">
           <Argument type="java.awt.event.ActionEvent" name="evt"/>
         </Method>
@@ -276,7 +275,7 @@ void" visibility="private"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="InterfaceGraphique" package="vue" visibility="public" xPosition="1820.0" yPosition="20.0">
+    <Class name="InterfaceGraphique" package="vue" visibility="public" xPosition="1490.0" yPosition="20.0">
       <Fields/>
       <Constructors/>
       <Methods/>
@@ -284,11 +283,11 @@ void" visibility="private"/>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <UseRelation source="controleur.Chambre" target="modele.Connexion" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="connect" source="controleur.Service" target="modele.Connexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="controleur.Service" target="modele.Connexion" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="service" source="vue.Home" target="controleur.Service" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="connect" source="vue.Home" target="modele.Connexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="chambre" source="vue.Home" target="controleur.Chambre" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="connect" source="controleur.Chambre" target="modele.Connexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="connect" source="controleur.Service" target="modele.Connexion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="service" source="vue.Home" target="controleur.Service" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

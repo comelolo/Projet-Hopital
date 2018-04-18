@@ -16,6 +16,7 @@ import java.awt.event.WindowEvent;
 import java.sql.SQLException;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -32,19 +33,19 @@ import modele.Connexion;
 
 
 
-public class ConnexionGraphique extends JFrame implements ActionListener, ItemListener {
-    private Connexion maconnexion;
-    private final JLabel titre, nomBDD, loginBDD, passwdBDD;
-    private final JTextField nomBDDTexte, loginBDDTexte;
-    private final JPasswordField passwdBDDTexte;
+public class ConnexionGraphique extends JDialog implements ActionListener, ItemListener {
+    private Connexion premiereConnexion;
+    private final JLabel titre, nom, login, mdp;
+    private final JTextField nomTxt, loginTxt;
+    private final JPasswordField mdpTxt;
     private final JButton connect;
     private final JPanel p0, p1, p11, p12, p13, p2;
     
-    public ConnexionGraphique()
-    {
+    public ConnexionGraphique(JFrame parent, String title) {  //JDialog pour se connecter avant d'acceder au programme
+    super(parent, title, true);
         // creation par heritage de la fenetre
-        super("Fenetre Login");
-        
+        //super("Identification");
+      
         // mise en page (layout) de la fenetre visible
         setLayout(new BorderLayout());
         setBounds(0, 0, 800, 400);
@@ -53,24 +54,20 @@ public class ConnexionGraphique extends JFrame implements ActionListener, ItemLi
         setLocationRelativeTo(null);
         
         // creation des labels
-        titre = new JLabel("Bienvenue dans la base de donnée Hopital", JLabel.CENTER);
-        nomBDD = new JLabel("Nom de la Base :", JLabel.CENTER);
-        loginBDD = new JLabel("Login :", JLabel.CENTER);
-        passwdBDD = new JLabel("Password :", JLabel.CENTER);
-                        
-        //taille des labels
-        Font font = new Font("Arial",Font.BOLD,40);
-        titre.setFont(font);
+        titre = new JLabel("Bienvenue, veuillez vous identifier", JLabel.CENTER);
+        nom = new JLabel("Nom de la BDD :", JLabel.CENTER);
+        login = new JLabel("Login :", JLabel.CENTER);
+        mdp = new JLabel("Mot de Passe :", JLabel.CENTER);
+        Font police = new Font("Arial",Font.BOLD,40);
+        titre.setFont(police);
         
-        // creation des textes
-        nomBDDTexte = new JTextField(8);
-        loginBDDTexte = new JTextField(8);
-        passwdBDDTexte = new JPasswordField(8);   
+        nomTxt = new JTextField(8);
+        loginTxt = new JTextField(8);
+        mdpTxt = new JPasswordField(8);   
         
-        // creation des boutons
         connect = new JButton("Ok");
         
-        // creation des panneaux
+        // mise en place des panneaux
         p0 = new JPanel();
         p1 = new JPanel();
         p11 = new JPanel();
@@ -78,19 +75,15 @@ public class ConnexionGraphique extends JFrame implements ActionListener, ItemLi
         p13 = new JPanel();
         p2 = new JPanel();
         
-        // mise en page des panneaux
-       /* p0.setLayout(new GridLayout(1, 10));
-        p1.setLayout(new GridLayout(2, 5));
-        p2.setLayout(new GridLayout(3, 15));*/
         
-        // ajout des objets graphqiues dans les panneaux
+        // ajout des objets graphiques dans les panneaux
         p0.add(titre);
-        p11.add(nomBDD);
-        p11.add(nomBDDTexte);
-        p12.add(loginBDD);
-        p12.add(loginBDDTexte);
-        p13.add(passwdBDD);
-        p13.add(passwdBDDTexte);
+        p11.add(nom);
+        p11.add(nomTxt);
+        p12.add(login);
+        p12.add(loginTxt);
+        p13.add(mdp);
+        p13.add(mdpTxt);
         p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
         p1.add(p11);
         p1.add(p12);
@@ -98,9 +91,9 @@ public class ConnexionGraphique extends JFrame implements ActionListener, ItemLi
         p2.add(connect);
 
         // ajout des listeners
-        nomBDDTexte.addActionListener(this);
-        loginBDDTexte.addActionListener(this);
-        passwdBDDTexte.addActionListener(this);
+        nomTxt.addActionListener(this);
+        loginTxt.addActionListener(this);
+        mdpTxt.addActionListener(this);
         connect.addActionListener(this);
         
         // disposition geographique des panneaux
@@ -113,10 +106,19 @@ public class ConnexionGraphique extends JFrame implements ActionListener, ItemLi
         // pour fermer la fenetre
         addWindowListener(new WindowAdapter() {
             @Override
-            public void windowClosing(WindowEvent evt) {
-                System.exit(0); // tout fermer												System.exit(0); // tout fermer
+            public void windowClosing(WindowEvent ae) {
+                System.exit(0); // tout fermer												
+                
             }
         });
+    }
+    
+    
+    
+    
+
+    public ConnexionGraphique() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     /**
@@ -124,26 +126,39 @@ public class ConnexionGraphique extends JFrame implements ActionListener, ItemLi
      * Pour gerer les actions sur les boutons on utilise la fonction
      * actionPerformed
      *
-     * @param evt
+     * @param ae
      */
     @Override
     @SuppressWarnings("CallToThreadDumpStack")
-    public void actionPerformed(ActionEvent evt) {
-        Object source = evt.getSource();
+    public void actionPerformed(ActionEvent ae) {
+        Object source = ae.getSource();
         
         // tester cas de la commande evenementielle
         if (source == connect) {
-            String nomBDDString = new String(nomBDDTexte.getText());
-            String loginBDDString = new String(loginBDDTexte.getText());
-            String passwdBDDString = new String(passwdBDDTexte.getPassword());
-            System.out.println("nom BDD = " + nomBDDString);
-            System.out.println("lgin BDD = " + loginBDDString);
-            System.out.println("passwd BDD = " + passwdBDDString);
+            String nomString = new String(nomTxt.getText());
+            String loginBDDString = new String(loginTxt.getText());
+            String mdpBDDString = new String(mdpTxt.getPassword());
+            System.out.println("nom = " + nomString);
+            System.out.println("login = " + loginBDDString);
+            System.out.println("mdp = " + mdpBDDString);
+
+
+           // if(nomString.equals("hopital") && loginBDDString.equals("root") && mdpBDDString.equals("")){   // [Version Finale] mdp normal
+            if(nomString.equals("") && loginBDDString.equals("") && mdpBDDString.equals("")){
+                System.out.println("Connexion OK");
+                this.setVisible(false);
+                
+            }
+            else{
+                System.out.println("Connexion refusee");
+            }
+
+/*
             try {
                 try {
                     // tentative de connexion si les 4 attributs sont remplis
-                    //maconnexion = new Connexion(nomBDDString, loginBDDString, passwdBDDString);
-                    maconnexion = new Connexion("hopital", "root", "");
+                    //maconnexion = new Connexion(nomString, loginBDDString, mdpBDDString);
+                    premiereConnexion = new Connexion("hopital", "root", "");
                     System.out.println("connexion ok");
                     String a=new String();
                     this.setVisible(false);
@@ -156,6 +171,8 @@ public class ConnexionGraphique extends JFrame implements ActionListener, ItemLi
                 System.out.println("Connexion echouee : probleme SQL");
                 e.printStackTrace();
             }
+
+*/            
         } 
         
     }
@@ -167,6 +184,7 @@ public class ConnexionGraphique extends JFrame implements ActionListener, ItemLi
      */
     @Override
     @SuppressWarnings("CallToThreadDumpStack")
-    public void itemStateChanged(ItemEvent evt) { 
+    public void itemStateChanged(ItemEvent ae) { 
     }
+    
 }

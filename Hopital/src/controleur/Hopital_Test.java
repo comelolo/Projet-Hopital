@@ -44,7 +44,7 @@ public class Hopital_Test {
             
             Home hopital = new Home(connect);
             
-            ConnexionGraphique connexion = new ConnexionGraphique();
+            ConnexionGraphique connexion = new ConnexionGraphique(hopital, "Bonjour, Identification svp");
             //*  si connexion valider alors
              // connexion.setVisible(false);
               // hopital.setVisible(true);
