@@ -5,6 +5,7 @@
 *.log
 /build
 /dist
+/nbproject
 
 # BlueJ files
 *.ctxt
