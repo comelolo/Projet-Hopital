@@ -49,6 +49,7 @@ public class Home extends javax.swing.JFrame {
         jTable1.getColumnModel().getColumn(4).setCellRenderer(new ButtonRenderer());
         jTable1.getColumnModel().getColumn(5).setCellRenderer(new ButtonRenderer());
         jTable_service.getColumnModel().getColumn(4).setCellRenderer(new ButtonRenderer());
+        jTable_service.getColumnModel().getColumn(5).setCellRenderer(new ButtonRenderer());
     }
 
     /**
@@ -92,6 +93,7 @@ public class Home extends javax.swing.JFrame {
         recherche_service = new javax.swing.JTextField();
         categorie_service = new java.awt.Choice();
         button_se_search = new javax.swing.JButton();
+        button_add_se = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("main_frame"); // NOI18N
@@ -235,7 +237,7 @@ public class Home extends javax.swing.JFrame {
         home_panelLayout.setHorizontalGroup(
             home_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(home_panelLayout.createSequentialGroup()
-                .addContainerGap(215, Short.MAX_VALUE)
+                .addContainerGap(437, Short.MAX_VALUE)
                 .addGroup(home_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, home_panelLayout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -251,7 +253,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(81, 81, 81)
                 .addComponent(jLabel1)
-                .addContainerGap(340, Short.MAX_VALUE))
+                .addContainerGap(290, Short.MAX_VALUE))
         );
 
         main_panel.add(home_panel, "card3");
@@ -359,7 +361,7 @@ public class Home extends javax.swing.JFrame {
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout chambre_panelLayout = new javax.swing.GroupLayout(chambre_panel);
@@ -404,14 +406,14 @@ public class Home extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nom", "Code", "Batiment", "Directeur", "Modifier"
+                "Nom", "Code", "Batiment", "Directeur", "Modifier", "Supprimer"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -463,6 +465,13 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        button_add_se.setText("Ajouter");
+        button_add_se.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_add_seMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -474,7 +483,9 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(categorie_service, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
                 .addComponent(button_se_search)
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 526, Short.MAX_VALUE)
+                .addComponent(button_add_se)
+                .addGap(65, 65, 65))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -483,7 +494,9 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(0, 9, Short.MAX_VALUE)
-                        .addComponent(button_se_search, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(button_se_search, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(button_add_se)))
                     .addComponent(recherche_service, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(categorie_service, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -523,18 +536,18 @@ public class Home extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1808, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1920, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(main_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(main_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 1711, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 955, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
                     .addComponent(main_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -606,6 +619,10 @@ public class Home extends javax.swing.JFrame {
         popup_ajouter_chambre(model_chambre);
     }//GEN-LAST:event_button_add_chMouseClicked
 
+    private void button_add_seMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_add_seMouseClicked
+        popup_ajouter_service(model_service);
+    }//GEN-LAST:event_button_add_seMouseClicked
+
     private void ini_tableau_chambre(Vector<Vector> requete) {
         ini_tableau(model_chambre, jTable1, requete);
     }
@@ -613,7 +630,10 @@ public class Home extends javax.swing.JFrame {
     private void ini_tableau_service(Vector<Vector> requete) {
         ini_tableau(model_service, jTable_service, requete);
     }
-
+    
+    /*
+    Fonction pour réactualiser le contenu d'un tableau
+    */
     private void ini_tableau(DefaultTableModel model, JTable table, Vector<Vector> requete) {
         while (model.getRowCount() != 0) {
             model.removeRow(0);
@@ -631,7 +651,10 @@ public class Home extends javax.swing.JFrame {
         table.repaint();
         table.revalidate();
     }
-
+    
+    /*
+    *Fonction pour remplir le contenu des tableaux
+    */
     private void remplir_jTable(java.awt.event.MouseEvent evt, JTable table, DefaultTableModel model) {
         int column = table.getColumnModel().getColumnIndexAtX(evt.getX());
         int row = evt.getY() / table.getRowHeight();
@@ -650,20 +673,28 @@ public class Home extends javax.swing.JFrame {
                         popup_modifier_chambre(model_chambre, valeur_ligne);
                     }
                     if (table == jTable_service) {
-
+                        popup_modifier_service(model_service, valeur_ligne);
                     }
                 }
+
                 if (bouton.getName().equals("s")) {
                     int h = JOptionPane.showConfirmDialog(null, "Etes vous sûr de vouloir supprimer cet élément ?", "supprimer", 0);
                     if (h == 0) {
-                        System.out.println("00000000000");
-                        String t = table.getValueAt(row, 0).toString();
-                        String requete = "DELETE FROM chambre WHERE code_service = '" 
-                                + table.getValueAt(row, 0).toString() +"' AND no_chambre = '" 
-                                + table.getValueAt(row, 1).toString() + "';";
-                        chambre.supprimer(connect, requete);
-                        JOptionPane.showMessageDialog(null, "La chambre a été supprimé avec succès !", "suppression ok", JOptionPane.INFORMATION_MESSAGE);
-                        ini_tableau_chambre(chambre.actualiser(connect));
+                        if (table == jTable1) {
+                            String requete = "DELETE FROM chambre WHERE code_service = '"
+                                    + table.getValueAt(row, 0).toString() + "' AND no_chambre = '"
+                                    + table.getValueAt(row, 1).toString() + "';";
+                            chambre.supprimer(connect, requete);
+                            JOptionPane.showMessageDialog(null, "La chambre a été supprimé avec succès !", "suppression ok", JOptionPane.INFORMATION_MESSAGE);
+                            ini_tableau_chambre(chambre.actualiser(connect));
+                        }
+                        if (table == jTable_service) {
+                            String requete = "DELETE FROM service WHERE code = '"
+                                    + table.getValueAt(row, 0).toString() + "';";
+                            service.supprimer(connect, requete);
+                            JOptionPane.showMessageDialog(null, "Le service a été supprimé avec succès !", "suppression ok", JOptionPane.INFORMATION_MESSAGE);
+                            ini_tableau_service(service.actualiser(connect));
+                        }
                     } else {
                         //on ne fait rien
                     }
@@ -709,12 +740,12 @@ public class Home extends javax.swing.JFrame {
             "Surveillant", surveillant,
             "Nombre de lits", nb_lits
         };
-        
+
         int option = JOptionPane.showConfirmDialog(null, message, "Ajouter une chambre", JOptionPane.OK_CANCEL_OPTION);
         if (option == JOptionPane.OK_OPTION) {
             if (code_service.getText().compareTo("code") == 0) {
-            System.out.println(code_service.getText());
-        }
+                System.out.println(code_service.getText());
+            }
             while (option == JOptionPane.OK_OPTION && (code_service.getText().compareTo("") == 0 || num_chambre.getText().compareTo("") == 0 || surveillant.getText().compareTo("") == 0 || nb_lits.getText().compareTo("") == 0)) {
                 JOptionPane.showMessageDialog(null, "Veuillez remplir tous les champs", "erreur", JOptionPane.OK_OPTION);
                 option = JOptionPane.showConfirmDialog(null, message, "Ajouter une chambre", JOptionPane.OK_CANCEL_OPTION);
@@ -729,7 +760,67 @@ public class Home extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "La chambre a bien été ajouté à la base de données !", "Ajout Réussi", JOptionPane.INFORMATION_MESSAGE);
                 ini_tableau_chambre(chambre.actualiser(connect));
             }
-        } 
+        }
+    }
+    
+    
+    private void popup_modifier_service(DefaultTableModel model, ArrayList valeur_ligne) {
+        JTextField code = new JTextField(valeur_ligne.get(0).toString());
+        JTextField nom = new JTextField(valeur_ligne.get(1).toString());
+        JTextField batiment = new JTextField(valeur_ligne.get(2).toString());
+        JTextField directeur = new JTextField(valeur_ligne.get(3).toString());
+        jTable_service.getColumnName(NORMAL);
+        Object[] message = {
+            "Code du service", code,
+            "Nom du service", nom,
+            "Batiment", batiment,
+            "Directeur", directeur
+        };
+        
+        int option = JOptionPane.showConfirmDialog(null, message, "modifier", JOptionPane.OK_CANCEL_OPTION);
+        if (option == JOptionPane.OK_OPTION) {
+            String requete = "UPDATE service SET "
+                    + "code = '" + code.getText() + "', "
+                    + "nom = '" + nom.getText() + "', "
+                    + "batiment = '" + batiment.getText() + "', "
+                    + "directeur = '" + directeur.getText() + "' "
+                    + "WHERE code = '" + valeur_ligne.get(0).toString() + "';";
+            service.modifier(connect, requete);
+            ini_tableau_service(service.actualiser(connect));
+        } else {
+
+        }
+    }
+
+    private void popup_ajouter_service(DefaultTableModel model) {
+        JTextField code = new JTextField("");
+        JTextField nom = new JTextField("");
+        JTextField batiment = new JTextField("");
+        JTextField directeur = new JTextField("");
+        Object[] message = {
+            "Code", code,
+            "Nom", nom,
+            "Batiment", batiment,
+            "Directeur", directeur
+        };
+
+        int option = JOptionPane.showConfirmDialog(null, message, "Création d'un nouveau service", JOptionPane.OK_CANCEL_OPTION);
+        while (option == JOptionPane.OK_OPTION && (code.getText().compareTo("") == 0 || nom.getText().compareTo("") == 0 || batiment.getText().compareTo("") == 0 || directeur.getText().compareTo("") == 0)) {
+            JOptionPane.showMessageDialog(null, "Veuillez remplir tous les champs", "erreur", JOptionPane.OK_OPTION);
+            option = JOptionPane.showConfirmDialog(null, message, "Création d'un nouveau service", JOptionPane.OK_CANCEL_OPTION);
+        }
+        if (option == JOptionPane.OK_OPTION) {
+            if (option == JOptionPane.OK_OPTION && code.getText().compareTo("") != 0 && nom.getText().compareTo("") != 0 && batiment.getText().compareTo("") != 0 && directeur.getText().compareTo("") != 0) {
+                String requete = "INSERT INTO service (code, nom, batiment, directeur) VALUES ('"
+                        + code.getText() + "', '"
+                        + nom.getText() + "', '"
+                        + batiment.getText() + "', '"
+                        + directeur.getText() + "');";
+                service.ajouter(connect, requete);
+                JOptionPane.showMessageDialog(null, "Le service a bien été créé à la base de données !", "Ajout Réussi", JOptionPane.INFORMATION_MESSAGE);
+                ini_tableau_service(service.actualiser(connect));
+            }
+        }
     }
 
     private void centrerTable(JTable table) {
@@ -766,6 +857,7 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton button_acceuil;
     private javax.swing.JButton button_add_ch;
+    private javax.swing.JButton button_add_se;
     private javax.swing.JButton button_ch_search;
     private javax.swing.JButton button_chambres;
     private javax.swing.JButton button_employes;
