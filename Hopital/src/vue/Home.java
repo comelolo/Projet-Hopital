@@ -20,7 +20,7 @@ import javax.swing.table.TableCellRenderer;
 
 /**
  *
- * @author comel
+ * @author comel, bd, louis
  */
 public class Home extends javax.swing.JFrame {
 

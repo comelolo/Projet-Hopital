@@ -26,7 +26,7 @@ import modele.Connexion;
 
 /**
  *
- * @author bd, comel
+ * @author bd, comel, louis
  */
 
 
@@ -133,7 +133,7 @@ public class ConnexionGraphique extends JDialog implements ActionListener, ItemL
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
         
-        // tester cas de la commande evenementielle
+        // evenements
         if (source == connect) {
             String nomString = new String(nomTxt.getText());
             String loginBDDString = new String(loginTxt.getText());
@@ -144,7 +144,7 @@ public class ConnexionGraphique extends JDialog implements ActionListener, ItemL
 
 
            // if(nomString.equals("hopital") && loginBDDString.equals("root") && mdpBDDString.equals("")){   // [Version Finale] mdp normal
-            if(nomString.equals("") && loginBDDString.equals("") && mdpBDDString.equals("")){
+            if(nomString.equals("hopital") && loginBDDString.equals("root") && mdpBDDString.equals("")){
                 System.out.println("Connexion OK");
                 this.setVisible(false);
                 
@@ -153,34 +153,15 @@ public class ConnexionGraphique extends JDialog implements ActionListener, ItemL
                 System.out.println("Connexion refusee");
             }
 
-/*
-            try {
-                try {
-                    // tentative de connexion si les 4 attributs sont remplis
-                    //maconnexion = new Connexion(nomString, loginBDDString, mdpBDDString);
-                    premiereConnexion = new Connexion("hopital", "root", "");
-                    System.out.println("connexion ok");
-                    String a=new String();
-                    this.setVisible(false);
-                    //FenetreMenu fen = new FenetreMenu(this);
-                } catch (ClassNotFoundException cnfe) {
-                    System.out.println("Connexion echouee : probleme de classe"); 
-                    cnfe.printStackTrace();
-                }
-            } catch (SQLException e) {
-                System.out.println("Connexion echouee : probleme SQL");
-                e.printStackTrace();
-            }
 
-*/            
         } 
         
     }
 
     /**
      *
-     * Pour gerer les actions sur items d'une liste on utilise la methode
-     * itemStateChanged
+     * 
+     * itemStateChanged : actions sur les elements d'une liste
      */
     @Override
     @SuppressWarnings("CallToThreadDumpStack")

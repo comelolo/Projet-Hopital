@@ -9,7 +9,7 @@ import modele.*;
 
 /**
 
- * @author duthu 
+ * @author comel, bd, louis 
  * 
  */
 public class Service {

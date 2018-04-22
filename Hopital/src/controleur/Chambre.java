@@ -11,7 +11,7 @@ import modele.*;
 
 /**
  *
- * @author comel
+ * @author comel, bd, louis
  */
 public class Chambre {
 
