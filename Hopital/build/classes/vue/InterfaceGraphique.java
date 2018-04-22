@@ -7,7 +7,7 @@ package vue;
 
 /**
  *
- * @author comel
+ * @author comel, bd, louis
  */
 public class InterfaceGraphique {
     

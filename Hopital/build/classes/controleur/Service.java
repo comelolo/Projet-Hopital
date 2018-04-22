@@ -9,7 +9,7 @@ import modele.*;
 
 /**
 
- * @author duthu 
+ * @author comel, bd, louis 
  * 
  */
 public class Service {
@@ -51,6 +51,23 @@ public class Service {
         result = recherche(con, "SELECT * FROM service;");
         return result;    
     }
+    
+    public void ajouter(Connexion con, String requete) {
+        try {
+            connect.execute(requete);
+        } catch (SQLException e) {
+            System.out.println("erreur lors de l'ajout : " + e);
+        } 
+    }
+    
+    public void supprimer(Connexion con, String requete) {
+        try {
+            connect.execute(requete);
+        } catch (SQLException e) {
+            System.out.println("erreur lors de la suppression du service : " + e);
+        } 
+    }
+    
     
 
     

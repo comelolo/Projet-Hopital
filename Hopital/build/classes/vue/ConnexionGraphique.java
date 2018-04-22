@@ -39,75 +39,78 @@ public class ConnexionGraphique extends JDialog implements ActionListener, ItemL
     private final JTextField nomTxt, loginTxt;
     private final JPasswordField mdpTxt;
     private final JButton connect;
-    private final JPanel panelA, panelB, panelBB, panelBC, panelBD, panelC;
+    private final JPanel p0, p1, p11, p12, p13, p2;
     
     public ConnexionGraphique(JFrame parent, String title) {  //JDialog pour se connecter avant d'acceder au programme
     super(parent, title, true);
         // creation par heritage de la fenetre
-        
+        //super("Identification");
       
-        // selection des parametres de la fenetre d'identification
+        // mise en page (layout) de la fenetre visible
         setLayout(new BorderLayout());
-        setBounds(0, 0, 900, 500);
+        setBounds(0, 0, 800, 400);
         setResizable(true);
         setVisible(true);
         setLocationRelativeTo(null);
         
-        // definition des noms des panneaux
-        titre = new JLabel("Bienvenue, veuillez vous identifier", JLabel.RIGHT);
-        nom = new JLabel("Nom de la BDD :", JLabel.RIGHT);
-        login = new JLabel("Login :", JLabel.RIGHT);
-        mdp = new JLabel("Mot de Passe :", JLabel.RIGHT);
-        
+        // creation des labels
+        titre = new JLabel("Bienvenue, veuillez vous identifier", JLabel.CENTER);
+        nom = new JLabel("Nom de la BDD :", JLabel.CENTER);
+        login = new JLabel("Login :", JLabel.CENTER);
+        mdp = new JLabel("Mot de Passe :", JLabel.CENTER);
         Font police = new Font("Arial",Font.BOLD,40);
         titre.setFont(police);
         
-        nomTxt = new JTextField(10);
-        loginTxt = new JTextField(10);
-        mdpTxt = new JPasswordField(10);
+        nomTxt = new JTextField(8);
+        loginTxt = new JTextField(8);
+        mdpTxt = new JPasswordField(8);   
+        
         connect = new JButton("Ok");
         
-        // definition des pannels
-        panelA = new JPanel();
-        panelB = new JPanel();
-        panelBB = new JPanel();
-        panelBC = new JPanel();
-        panelBD = new JPanel();
-        panelC = new JPanel();
+        // mise en place des panneaux
+        p0 = new JPanel();
+        p1 = new JPanel();
+        p11 = new JPanel();
+        p12 = new JPanel();
+        p13 = new JPanel();
+        p2 = new JPanel();
         
         
-        // insertion des noms et des boutons dans les pannels
-        
-        panelA.add(titre);
-        panelBB.add(nom);
-        panelBB.add(nomTxt);
-        panelBC.add(login);
-        panelBC.add(loginTxt);
-        panelBD.add(mdp);
-        panelBD.add(mdpTxt);
-        
-        panelB.setLayout(new BoxLayout(panelB, BoxLayout.PAGE_AXIS));
-        panelB.add(panelBB);
-        panelB.add(panelBC);
-        panelB.add(panelBD);
-        panelC.add(connect);
-        
-        add("North", panelA);
-        add("Center",panelB);
-        add("South",panelC);
+        // ajout des objets graphiques dans les panneaux
+        p0.add(titre);
+        p11.add(nom);
+        p11.add(nomTxt);
+        p12.add(login);
+        p12.add(loginTxt);
+        p13.add(mdp);
+        p13.add(mdpTxt);
+        p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
+        p1.add(p11);
+        p1.add(p12);
+        p1.add(p13);
+        p2.add(connect);
 
-        // listeners
+        // ajout des listeners
         nomTxt.addActionListener(this);
         loginTxt.addActionListener(this);
         mdpTxt.addActionListener(this);
         connect.addActionListener(this);
         
-        
-        
+        // disposition geographique des panneaux
+        add("North", p0);
+        add("Center",p1);
+        add("South",p2);
 
         this.setVisible(true);      
 
-        
+        // pour fermer la fenetre
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent ae) {
+                System.exit(0); // tout fermer												
+                
+            }
+        });
     }
     
     
@@ -115,17 +118,18 @@ public class ConnexionGraphique extends JDialog implements ActionListener, ItemL
     
 
     public ConnexionGraphique() {
-        throw new UnsupportedOperationException("Not supported yet."); //Je sais pas trop ce que ca fait 
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     /**
      *
-     * Utilisation de  ActionPerformed pour les boutons
-     * 
+     * Pour gerer les actions sur les boutons on utilise la fonction
+     * actionPerformed
      *
      * @param ae
      */
-   
+    @Override
+    @SuppressWarnings("CallToThreadDumpStack")
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
         

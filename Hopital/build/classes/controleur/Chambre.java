@@ -11,21 +11,17 @@ import modele.*;
 
 /**
  *
- * @author comel
+ * @author comel, bd, louis
  */
 public class Chambre {
 
-    private int no_chambre;
-    private String code_service;
-    private int surveillant;
-    private int nb_lits;
     private Connexion connect;
     public Vector<Vector> result;
-    public String requete = "SELECT * FROM chambre;";
+    public String requete = "SELECT * FROM service;";
 
     public Chambre(Connexion con) {
         connect = con;
-        result = recherche(con, "SELECT * FROM chambre;");
+        result = actualiser(con);
     }
 
     /**
@@ -34,7 +30,6 @@ public class Chambre {
      * @param new_requete
      * @return
      */
-    
     public Vector<Vector> recherche(Connexion connect, String new_requete) {
         Vector<Vector> result = new Vector<Vector>();
         try {
@@ -44,6 +39,38 @@ public class Chambre {
         }
         return result;
     }
+    
+    public void modifier(Connexion connect, String requete) {
+        try {
+            connect.executeUpdate(requete);
+        } catch (SQLException e) {
+            System.out.println("erreur lors de la modification : " + e);
+        }
+    }
+    
+    
+    public Vector<Vector> actualiser(Connexion con) {
+        result = recherche(con, "SELECT * FROM chambre;");
+        return result;
+    }
+    
+    
+    public void ajouter(Connexion con, String requete) {
+        try {
+            connect.execute(requete);
+        } catch (SQLException e) {
+            System.out.println("erreur lors de l'ajout : " + e);
+        } 
+    }
+    
+    public void supprimer(Connexion con, String requete) {
+        try {
+            connect.execute(requete);
+        } catch (SQLException e) {
+            System.out.println("erreur lors de la suppression de l'élément : " + e);
+        } 
+    }
+    
     
     
 

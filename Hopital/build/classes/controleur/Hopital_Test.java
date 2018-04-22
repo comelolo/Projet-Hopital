@@ -14,7 +14,7 @@ import vue.*;
 
 /**
  *
- * @author comel
+ * @author comel, bd, louis
  */
 public class Hopital_Test {
 
@@ -22,26 +22,35 @@ public class Hopital_Test {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic here  
         Connexion connect = null;
 
         try {
             connect = new Connexion("hopital", "root", "");
+            /*
             String table = "chambre";
             String requete = "SELECT * FROM chambre;";
-            Vector<Vector> ligne= connect.remplirChampsRequete(requete);
-            
-            for (int j = 0; j < ligne.size(); j++) {   
+            Vector<Vector> ligne = connect.remplirChampsRequete(requete);
+
+            for (int j = 0; j < ligne.size(); j++) {
                 Vector n = new Vector();
-                String champ="";
+                String champ = "";
                 n = ligne.get(j);
-                for (int i = 0; i < n.size(); i++) {   
+                for (int i = 0; i < n.size(); i++) {
                     champ = champ + " " + n.get(i);
                 }
-                champ=champ + "\n";
+                champ = champ + "\n";
                 System.out.println(champ);
             }
+*/
+
             Home hopital = new Home(connect);
+
+            ConnexionGraphique connexion = new ConnexionGraphique(hopital, "Bonjour, Identification svp");
+            //*  si connexion valider alors
+            // connexion.setVisible(false);
+            // hopital.setVisible(true);
+
             hopital.setVisible(true);
         } catch (SQLException | ClassNotFoundException e) {
             System.out.println("erreur : " + e);
